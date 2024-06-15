@@ -55,6 +55,10 @@ public class MainActivity extends AppCompatActivity {
         edPassword = findViewById(R.id.editTextTextPassword);
     }
 
+    private void showToast(String txt) {
+        Toast.makeText(this, txt, Toast.LENGTH_LONG).show();
+    }
+
     private void requestLogin(String email, String password) {
 
         Retrofit retrofit = RetrofitInstance.getRetrofit_instance();
