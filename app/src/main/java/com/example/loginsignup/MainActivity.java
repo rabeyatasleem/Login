@@ -69,6 +69,7 @@ public class MainActivity extends AppCompatActivity {
             public void onResponse(@NonNull Call<ResponseModel> call, @NonNull Response<ResponseModel> response) {
                 if (response.isSuccessful()) {
                     Log.d(TAG, "onResponse: " + response.body());
+                    showToast(response.body().getToken().toString());
                 }
             }
 
